@@ -1,0 +1,433 @@
+/* ==========================================================================
+   1. RESET E CONFIGURAÇÕES GERAIS
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #000000; /* Preto puro absoluto */
+    color: #FFFFFF;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* ==========================================================================
+   2. CABEÇALHO E NAVEGAÇÃO (HEADER)
+   ========================================================================== */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background-color: #050505;
+    border-bottom: 1px solid #1a1a1a;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo-nav {
+    display: flex;
+    align-items: center;
+}
+
+/* Logo do canto superior esquerdo */
+.nav-logo-img {
+    height: 70px;
+    width: auto;
+    object-fit: contain;
+    mix-blend-mode: screen; /* Remove fundo preto/escuro da imagem */
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-menu a {
+    color: #CCCCCC;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: #D4AF37;
+}
+
+.nav-menu .btn-agendar-nav {
+    background-color: #D4AF37;
+    color: #000000;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.nav-menu .btn-agendar-nav:hover {
+    background-color: #f1c40f;
+    transform: scale(1.05);
+}
+
+/* ==========================================================================
+   3. SEÇÃO PRINCIPAL (HERO SECTION)
+   ========================================================================== */
+.hero-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #000000;
+}
+
+.hero-content {
+    max-width: 600px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Logo principal do centro */
+.main-logo {
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    object-fit: contain;
+    mix-blend-mode: screen; /* Torna o fundo da logo transparente */
+}
+
+.hero-content h1 {
+    color: #D4AF37;
+    font-size: 2.2rem;
+    letter-spacing: 1.5px;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+}
+
+.hero-content p {
+    color: #AAAAAA;
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+.btn-whatsapp {
+    display: inline-block;
+    background-color: #25D366;
+    color: #FFFFFF;
+    padding: 14px 36px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.btn-whatsapp:hover {
+    background-color: #1ebd56;
+    transform: scale(1.05);
+}
+
+/* ==========================================================================
+   4. SEÇÕES GERAIS E CARDS DE DESTAQUE
+   ========================================================================== */
+.section-container {
+    padding: 60px 5%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.section-title {
+    text-align: center;
+    color: #D4AF37;
+    font-size: 1.8rem;
+    margin-bottom: 40px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* Card Destaque (Gloss Express) */
+.card-destaque {
+    background-color: #111111;
+    border: 1px solid #222222;
+    border-radius: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    gap: 0;
+}
+
+.card-image-wrapper {
+    flex: 1 1 350px;
+    background-color: #1a1a1a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px;
+}
+
+.card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.card-info {
+    flex: 1 1 400px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.badge {
+    align-self: flex-start;
+    background-color: #1a1a1a;
+    color: #D4AF37;
+    border: 1px solid #D4AF37;
+    font-size: 0.75rem;
+    padding: 5px 12px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.card-info h3 {
+    font-size: 2rem;
+    color: #FFFFFF;
+    margin-bottom: 5px;
+}
+
+.card-info h4 {
+    color: #D4AF37;
+    font-weight: normal;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.card-info p {
+    color: #CCCCCC;
+    font-size: 0.95rem;
+    margin-bottom: 25px;
+}
+
+.btn-card {
+    display: inline-block;
+    align-self: flex-start;
+    background-color: #D4AF37;
+    color: #000000;
+    padding: 12px 26px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-card:hover {
+    background-color: #f1c40f;
+    transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   5. SEÇÃO DE SERVIÇOS
+   ========================================================================== */
+.servicos-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.servico-categoria {
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 20px;
+    width: 280px;
+}
+
+.servico-categoria h3 {
+    color: #d4af37; /* Cor dourada para o título da categoria */
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    border-bottom: 1px solid #333;
+    padding-bottom: 8px;
+}
+
+.servico-categoria ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.servico-categoria li {
+    padding: 6px 0;
+    color: #ccc;
+}
+
+/* ==========================================================================
+   6. SEÇÃO PORTFÓLIO (CATÁLOGO DE IMAGENS)
+   ========================================================================== */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.portfolio-item {
+    overflow: hidden;
+    border-radius: 12px;
+    border: 1px solid #222222;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    background-color: #111111;
+    height: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(212, 175, 55, 0.2);
+    border-color: #D4AF37;
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* ==========================================================================
+   7. LOCALIZAÇÃO E REDES SOCIAIS
+   ========================================================================== */
+.address-text {
+    text-align: center;
+    color: #CCCCCC;
+    margin-bottom: 25px;
+    font-size: 1.05rem;
+}
+
+.map-container {
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #222222;
+    margin-bottom: 30px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.btn-social {
+    padding: 12px 28px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #FFFFFF;
+    transition: transform 0.2s ease, opacity 0.3s ease;
+}
+
+.btn-social:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+.btn-instagram {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+.btn-whatsapp-soc {
+    background-color: #25D366;
+}
+
+/* ==========================================================================
+   8. RODAPÉ (FOOTER)
+   ========================================================================== */
+.footer {
+    text-align: center;
+    padding: 25px;
+    color: #666666;
+    font-size: 0.85rem;
+    border-top: 1px solid #111111;
+    background-color: #050505;
+}
+
+/* ==========================================================================
+   9. RESPONSIVIDADE (DISPOSITIVOS MÓVEIS)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        gap: 12px;
+        padding: 12px;
+    }
+
+    .nav-logo-img {
+        height: 50px;
+    }
+
+    .nav-menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .nav-menu a {
+        font-size: 0.85rem;
+    }
+
+    .hero-section {
+        padding: 30px 15px;
+    }
+
+    .main-logo {
+        max-width: 120px;
+        margin-bottom: 15px;
+    }
+
+    .hero-content h1 {
+        font-size: 1.4rem;
+    }
+
+    .hero-content p {
+        font-size: 0.95rem;
+        margin-bottom: 20px;
+    }
+
+    .card-info {
+        padding: 20px;
+    }
+
+    .section-container {
+        padding: 40px 4%;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 12px;
+    }
+
+    .portfolio-item {
+        height: 200px;
+    }
+}
