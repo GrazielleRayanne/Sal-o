@@ -99,10 +99,10 @@ body {
     align-items: center;
 }
 
-/* Logo principal do centro */
+/* Logo principal do centro (Computadores) */
 .main-logo {
-    max-width: 600px;
     width: 100%;
+    max-width: 450px;
     height: auto;
     margin-bottom: 20px;
     object-fit: contain;
@@ -400,9 +400,11 @@ body {
         padding: 30px 15px;
     }
 
+    /* Logo principal do centro (Dispositivos Móveis) */
     .main-logo {
-        max-width: 120px;
-        margin-bottom: 15px;
+        width: 85% !important;
+        max-width: 300px !important; /* Aumentado de 120px para 300px no celular */
+        margin-bottom: 20px;
     }
 
     .hero-content h1 {
